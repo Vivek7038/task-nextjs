@@ -20,7 +20,7 @@ export default function ToastProvider({ children }) {
   return (
     <ToastContext.Provider value={{ open, close }}>
       {children}
-      <div className="space-x-2 absolute top-[30%] left-[40%]">
+      <div className="space-x-2 absolute  top-[30%] left-[40%] md:top-[30%] md:left-[40%]">
         {toasts.map(({ id, component }) => (
           <div key={id} className="relative">
             <button
