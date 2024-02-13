@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useCallback } from "react";
 import ReactFlow, {
   MiniMap,
@@ -22,7 +23,6 @@ const initialEdges = [
     source: "A",
     target: "B",
     data: { label: "eA-B" },
-    animated: true,
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
     sourceHandle: "bottom", // Specify source handle as "bottom" for node A
     targetHandle: "bottom", // Specify target handle as "bottom" for node B
@@ -32,7 +32,6 @@ const initialEdges = [
     source: "B",
     target: "C",
     data: { label: "eB-C" },
-    animated: true,
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
     sourceHandle: "bottom", // Specify source handle as "bottom" for node A
     targetHandle: "bottom", // Specify target handle as "bottom" for node B
