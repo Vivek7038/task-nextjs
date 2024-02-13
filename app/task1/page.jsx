@@ -24,8 +24,34 @@ const initialEdges = [
     target: "B",
     data: { label: "eA-B" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
-    sourceHandle: "bottom", // Specify source handle as "bottom" for node A
-    targetHandle: "bottom", // Specify target handle as "bottom" for node B
+  },
+  {
+    id: "eB-C",
+    source: "B",
+    target: "C",
+    data: { label: "eB-C" },
+    style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+  },
+  {
+    id: "eC-A",
+    source: "C",
+    target: "A",
+    data: { label: "eC-A" },
+    style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+  },
+  {
+    id: "eA-C",
+    source: "A",
+    target: "C",
+    data: { label: "eA-C" },
+    style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+  },
+  {
+    id: "eC-B",
+    source: "C",
+    target: "B",
+    data: { label: "eC-B" },
+    style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
   },
   {
     id: "eB-A",
@@ -33,8 +59,6 @@ const initialEdges = [
     target: "A",
     data: { label: "eB-A" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
-    sourceHandle: "bottom", // Specify source handle as "bottom" for node A
-    targetHandle: "bottom", // Specify target handle as "bottom" for node B
   },
 ];
 
