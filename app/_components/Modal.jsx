@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useToast } from "./_providers/ToastService.jsx";
+import Link from "next/link";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -34,6 +35,15 @@ const Modal = () => {
 
   return (
     <>
+      <div className="pl-8 mt-4">
+        <Link
+          href="/"
+          className="bg-blue-200 text-black active:bg-blue-500 font-bold px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none  w-fit "
+        >
+          {" "}
+          Home
+        </Link>
+      </div>
       <div className="min-h-screen p-24 flex justify-center items-center">
         <button
           className="bg-blue-200 text-black active:bg-blue-500 font-bold px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-5 w-fit"
