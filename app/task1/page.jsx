@@ -8,6 +8,7 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   addEdge,
+  MarkerType,
 } from "reactflow";
 
 import "reactflow/dist/style.css";
@@ -24,6 +25,9 @@ const initialEdges = [
     target: "B",
     data: { label: "eA-B" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+    markerEnd: {
+      type: MarkerType.Arrow,
+    },
   },
   {
     id: "eB-C",
@@ -31,6 +35,9 @@ const initialEdges = [
     target: "C",
     data: { label: "eB-C" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+    markerEnd: {
+      type: MarkerType.Arrow,
+    },
   },
   {
     id: "eC-A",
@@ -38,6 +45,9 @@ const initialEdges = [
     target: "A",
     data: { label: "eC-A" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+    markerEnd: {
+      type: MarkerType.Arrow,
+    },
   },
   {
     id: "eA-C",
@@ -45,6 +55,9 @@ const initialEdges = [
     target: "C",
     data: { label: "eA-C" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+    markerEnd: {
+      type: MarkerType.Arrow,
+    },
   },
   {
     id: "eC-B",
@@ -52,6 +65,9 @@ const initialEdges = [
     target: "B",
     data: { label: "eC-B" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+    markerEnd: {
+      type: MarkerType.Arrow,
+    },
   },
   {
     id: "eB-A",
@@ -59,6 +75,9 @@ const initialEdges = [
     target: "A",
     data: { label: "eB-A" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
+    markerEnd: {
+      type: MarkerType.Arrow,
+    },
   },
 ];
 
