@@ -28,10 +28,10 @@ const initialEdges = [
     targetHandle: "bottom", // Specify target handle as "bottom" for node B
   },
   {
-    id: "eB-C",
+    id: "eB-A",
     source: "B",
-    target: "C",
-    data: { label: "eB-C" },
+    target: "A",
+    data: { label: "eB-A" },
     style: { stroke: "black", strokeWidth: 2, curve: "curveBasis" },
     sourceHandle: "bottom", // Specify source handle as "bottom" for node A
     targetHandle: "bottom", // Specify target handle as "bottom" for node B
