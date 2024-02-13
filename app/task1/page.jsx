@@ -12,7 +12,7 @@ import ReactFlow, {
 } from "reactflow";
 
 import "reactflow/dist/style.css";
-import { motion } from "framer-motion";}
+import { motion } from "framer-motion";
 const initialNodes = [
   { id: "A", position: { x: -99.5, y: 29 }, data: { label: "A" } },
   { id: "B", position: { x: 184, y: 34 }, data: { label: "B" } },
