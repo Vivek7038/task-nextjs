@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import ReactFlow, {
   MiniMap,
   Controls,
@@ -12,7 +12,9 @@ import ReactFlow, {
 } from "reactflow";
 
 import "reactflow/dist/style.css";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { FaFileAlt } from "react-icons/fa";
+
 const initialNodes = [
   { id: "A", position: { x: -99.5, y: 29 }, data: { label: "A" } },
   { id: "B", position: { x: 184, y: 34 }, data: { label: "B" } },
@@ -85,7 +87,8 @@ const initialEdges = [
 export default function App() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-
+  const [animationControls, setAnimationControls] = useState(null);
+  const fileIconAnimationControls = useAnimation();
   const nodeChange = (changedNode) => {
     console.log(
       `Node ${changedNode.id} - X: ${changedNode.position.x}, Y: ${changedNode.position.y}`
@@ -102,6 +105,18 @@ export default function App() {
     [setEdges]
   );
 
+  const animateFileIconAlongEdge = async () => {
+    await fileIconAnimationControls.start({
+      x: 78,
+      y: 89,
+      transition: { duration: 2 },
+    });
+  };
+
+  useEffect(() => {
+    animateFileIconAlongEdge();
+  }, []); // Run the animation when component mounts
+
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <ReactFlow
@@ -113,7 +128,16 @@ export default function App() {
         onNodeDragStop={onNodeDragStop}
         fitView
       >
-        
+        <motion.div
+          style={{
+            position: "absolute",
+          }}
+          animate={fileIconAnimationControls}
+          className="z-[999999]"
+        >
+          <FaFileAlt size={30} color="blue" />
+        </motion.div>
+
         <Controls />
         <MiniMap />
         <Background variant="dots" gap={12} size={1} />
