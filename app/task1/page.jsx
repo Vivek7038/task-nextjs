@@ -96,7 +96,6 @@ export default function App() {
   };
 
   const onNodeDragStop = (event, node) => {
-    // Trigger nodeChange function when node position changes
     nodeChange(node);
   };
 
@@ -115,7 +114,7 @@ export default function App() {
 
   useEffect(() => {
     animateFileIconAlongEdge();
-  }, []); // Run the animation when component mounts
+  }, []); 
 
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
@@ -128,7 +127,7 @@ export default function App() {
         onNodeDragStop={onNodeDragStop}
         fitView
       >
-        <motion.div
+        {/* <motion.div
           style={{
             position: "absolute",
           }}
@@ -136,7 +135,7 @@ export default function App() {
           className="z-[999999]"
         >
           <FaFileAlt size={30} color="blue" />
-        </motion.div>
+        </motion.div> */}
 
         <Controls />
         <MiniMap />
