@@ -23,11 +23,15 @@ export default function App() {
         <div className="top-nodes">
           <div className="circle circle1 justify-center ">
             1
-            <div>
+            <div className="icon-1">
               <FaFile color="yellow" />
             </div>
           </div>
-          <div className="circle">2</div>
+          <div className="circle">2
+          <div>
+      
+            </div>
+          </div>
         </div>
         <div className="base-node">
           <div className="circle">3</div>
