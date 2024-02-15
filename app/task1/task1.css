@@ -37,6 +37,7 @@ body {
 }
 .icon-1 {
   animation: moveAtoB 5s linear;
+  /* animation: moveAtoB 5s linear; */
   z-index: 99;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -67,26 +68,19 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
+
 @keyframes moveBtoC {
   0% {
-    transform: translate(0, 0) rotate(0);
-    opacity: 1;
     visibility: visible;
-  }
-  50% {
-    transform: translate(50px, 100px) rotate(22deg); /* Ending position */
-  }
-  75% {
-    transform: translate(-40px, 180px) rotate(67deg); /* Ending position */
+    transform: rotate(180deg) translate(0, 0) rotate(0deg);
   }
 
   100% {
-    transform: translate(-150px, 250px) rotate(80deg); /* Ending position */
     visibility: hidden;
+    transform: rotate(360deg) translate(-95px, 200px) rotate(-180deg);
   }
 }
 
-/* B to a */
 @keyframes moveBtoA {
   0% {
     transform: translate(180px, 0) rotate(90deg);
