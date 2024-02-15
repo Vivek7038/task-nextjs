@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import "./task1.css";
+import { FaFile } from "react-icons/fa";
+
 export default function App() {
   return (
     <>
@@ -13,9 +15,14 @@ export default function App() {
           Home
         </Link>
       </div>
-      <div className="triangle-container">
+      <div className="triangle-container ">
         <div className="top-nodes">
-          <div className="circle circle1">1</div>
+          <div className="circle circle1 justify-center ">
+            1
+            <div>
+            <FaFile color="yellow"/>
+            </div>
+          </div>
           <div className="circle">2</div>
         </div>
         <div className="base-node">

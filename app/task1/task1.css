@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(68, 62, 62);
+}
 .triangle-container {
   display: flex;
   flex-direction: column;
@@ -23,10 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.circle1 {
-  animation: moveAtoB 3s linear infinite; /* Adjust the duration and timing function as needed */
-  z-index: 9999;
+  text-align: center;
 }
 
 .base-node {
@@ -35,18 +35,29 @@
   align-items: center;
   gap: 150px;
 }
+.circle1 :nth-child(1) {
+  animation: moveAtoB 8s linear;
+  z-index: 99;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 @keyframes moveAtoB {
   0% {
     transform: translate(0, 0) rotate(0);
+    opacity: 1;
+    visibility: visible;
   }
   25% {
-    transform: translate(100px, -50px) rotate(45deg);
+    transform: translate(90px, -40px) rotate(22.5deg); /* Adjusted rotation to half of 45 degrees */
+    opacity: 0.4;
   }
-  50% {
-    transform: translate(200px, 0) rotate(90deg);
+  75% {
+    transform: translate(120px, -30px) rotate(67.5deg); /* Adjusted rotation to half of 135 degrees */
+    opacity: 0.1;
   }
   100% {
-    transform: translate(200px, 0px) rotate(135deg);
+    transform: translate(180px, 0) rotate(90deg); /* Adjusted rotation to half of 180 degrees */
     opacity: 0;
+    visibility: hidden;
   }
 }
