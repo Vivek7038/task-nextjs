@@ -13,6 +13,15 @@ export default function App() {
           Home
         </Link>
       </div>
+      <div className="triangle-container">
+        <div className="top-nodes">
+          <div className="circle">1</div>
+          <div className="circle">2</div>
+        </div>
+        <div className="base-node">
+          <div className="circle">3</div>
+        </div>
+      </div>
     </>
   );
 }
