@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import "./task1.css";
+import { useState, useEffect } from "react";
 import { FaFile } from "react-icons/fa";
 import { GrTask } from "react-icons/gr";
 import { FaPerson } from "react-icons/fa6";
@@ -9,6 +10,7 @@ import { FaBoxOpen } from "react-icons/fa";
 import { LuFileText } from "react-icons/lu";
 
 export default function App() {
+  const [Icon, setIcon] = useState(0);
   return (
     <>
       <div className="pl-8 mt-4">
@@ -27,10 +29,8 @@ export default function App() {
               <FaFile color="yellow" />
             </div>
           </div>
-          <div className="circle">2
-          <div>
-      
-            </div>
+          <div className="circle">
+            2<div></div>
           </div>
         </div>
         <div className="base-node">
