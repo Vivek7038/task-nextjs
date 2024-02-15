@@ -6,7 +6,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px; /* Adjust the height as needed for the medium-sized triangle */
+  height: 250px; 
   gap: 150px;
   margin-top: 5%;
 }
@@ -21,7 +21,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3498db; /* You can choose your preferred color */
+  background-color: #3498db; 
   color: white;
   display: flex;
   align-items: center;
@@ -40,26 +40,6 @@ body {
   z-index: 99;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
-@keyframes moveAtoB {
-  0% {
-    transform: translate(0, 0) rotate(0);
-    opacity: 1;
-    visibility: visible;
-  }
-  25% {
-    transform: translate(90px, -50px) rotate(22.5deg);
-  }
-  50% {
-    transform: translate(120px, -50px) rotate(67.5deg);
-  }
-  75% {
-    transform: translate(160px, -30px) rotate(67.5deg);
-  }
-  100% {
-    transform: translate(180px, 0) rotate(90deg);
-    visibility: hidden;
-  }
 }
 .icon-2 {
   animation: moveBtoC 5s linear;
@@ -80,26 +60,6 @@ body {
   }
 }
 
-@keyframes moveBtoA {
-  0% {
-    transform: translate(180px, 0) rotate(90deg);
-    visibility: hidden;
-  }
-  25% {
-    transform: translate(160px, -30px) rotate(67.5deg);
-  }
-  50% {
-    transform: translate(120px, -50px) rotate(67.5deg);
-  }
-  75% {
-    transform: translate(90px, -50px) rotate(22.5deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0);
-    opacity: 1;
-    visibility: visible;
-  }
-}
 .icon-3 {
   animation: moveCtoA 5s linear;
   z-index: 99;
@@ -117,3 +77,87 @@ body {
     transform: rotate(180deg) translate(95px, 200px) rotate(-180deg);
   }
 }
+.icon-4 {
+  animation: moveAtoC 5s linear;
+  z-index: 99;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes moveAtoC {
+       0% {
+              visibility: visible;
+              transform: rotate(180deg) translate(95px, 200px) rotate(0deg);
+            }
+          
+            100% {
+              visibility: hidden;
+              transform: rotate(180deg) translate(0px, 0) rotate(-90deg);
+            }
+     }
+.icon-5{
+       animation: moveCtoB 5s linear;
+       z-index: 99;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;  
+}
+
+@keyframes moveCtoB {
+       0% {
+              visibility: visible;
+              transform: rotate(-90deg) translate(0, 0) rotate(-180deg);
+            }
+          
+            100% {
+              visibility: hidden;
+              transform: rotate(-180deg) translate(-95px, 200px) rotate(-180deg);
+            }
+     }
+     .icon-6{
+       animation: moveBtoA 5s linear;
+       z-index: 99;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;  
+     }
+
+     @keyframes moveAtoB {
+       0% {
+              visibility: visible;
+              transform: rotate(90deg) transl,ate(0 0) rotate(-90deg);
+            }
+          
+            100% {
+              visibility: hidden;
+              transform: rotate(180deg) translate(-200px, 0) rotate(-180deg);
+            }
+     }
+     @keyframes moveBtoA {
+       0% {
+              visibility: visible;
+              transform: rotate(180deg) translate(-200px, 0) rotate(-180deg);
+            }
+          
+            100% {
+              visibility: hidden;
+              transform: rotate(90deg) translate(0, 0) rotate(-90deg);
+            }
+     }
+    
+       0% {
+         transform: translate(180px, 0) rotate(90deg);
+         visibility: hidden;
+       }
+       25% {
+         transform: translate(160px, -30px) rotate(67.5deg);
+       }
+       50% {
+         transform: translate(120px, -50px) rotate(67.5deg);
+       }
+       75% {
+         transform: translate(90px, -50px) rotate(22.5deg);
+       }
+       100% {
+         transform: translate(0, 0) rotate(0);
+         opacity: 1;
+         visibility: visible;
+       }
+     } */

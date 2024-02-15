@@ -12,18 +12,18 @@ import { LuFileText } from "react-icons/lu";
 export default function App() {
   const [icon, setIcon] = useState(1);
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     if (icon < 7) {
-  //       setIcon((prevIcon) => prevIcon + 1);
-  //     } else {
-  //       clearInterval(intervalId);
-  //     }
-  //   }, 5000); 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (icon < 7) {
+        setIcon((prevIcon) => prevIcon + 1);
+      } else {
+        clearInterval(intervalId);
+      }
+    }, 5000); 
 
     
-  //   return () => clearInterval(intervalId);
-  // }, [icon]);
+    return () => clearInterval(intervalId);
+  }, [icon]);
 
 
   return (
@@ -36,12 +36,14 @@ export default function App() {
           Home
         </Link>
       </div>
-      {icon}
       <div className="triangle-container ">
         <div className="top-nodes">
           <div className="circle circle1 justify-center ">
             1
             <div className={icon === 1 ? "icon-1" : "hidden"}>
+              <FaFile color="yellow" />
+            </div>
+            <div className={icon === 6 ? "icon-6" : "hidden"}>
               <FaFile color="yellow" />
             </div>
           </div>
@@ -59,6 +61,12 @@ export default function App() {
           <div className="circle">3
           <div className={icon === 3 ? "icon-3" : "hidden"}>
               <FaPerson color="yellow" />
+            </div>
+          <div className={icon === 4 ? "icon-4" : "hidden"}>
+              <FaBoxOpen color="yellow" />
+            </div>
+          <div className={icon === 5 ? "icon-5" : "hidden"}>
+              <LuFileText color="yellow" />
             </div>
           </div>
         </div>
