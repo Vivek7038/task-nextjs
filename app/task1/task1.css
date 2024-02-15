@@ -48,15 +48,15 @@ body {
     visibility: visible;
   }
   25% {
-    transform: translate(90px, -40px) rotate(22.5deg); /* Adjusted rotation to half of 45 degrees */
+    transform: translate(90px, -40px) rotate(22.5deg);
     opacity: 0.4;
   }
   75% {
-    transform: translate(120px, -30px) rotate(67.5deg); /* Adjusted rotation to half of 135 degrees */
+    transform: translate(120px, -30px) rotate(67.5deg);
     opacity: 0.1;
   }
   100% {
-    transform: translate(180px, 0) rotate(90deg); /* Adjusted rotation to half of 180 degrees */
+    transform: translate(180px, 0) rotate(90deg);
     opacity: 0;
     visibility: hidden;
   }
