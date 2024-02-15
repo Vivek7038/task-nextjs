@@ -3,6 +3,10 @@
 import Link from "next/link";
 import "./task1.css";
 import { FaFile } from "react-icons/fa";
+import { GrTask } from "react-icons/gr";
+import { FaPerson } from "react-icons/fa6";
+import { FaBoxOpen } from "react-icons/fa";
+import { LuFileText } from "react-icons/lu";
 
 export default function App() {
   return (
@@ -20,7 +24,7 @@ export default function App() {
           <div className="circle circle1 justify-center ">
             1
             <div>
-            <FaFile color="yellow"/>
+              <FaFile color="yellow" />
             </div>
           </div>
           <div className="circle">2</div>
