@@ -15,7 +15,7 @@ export default function App() {
       </div>
       <div className="triangle-container">
         <div className="top-nodes">
-          <div className="circle">1</div>
+          <div className="circle circle1">1</div>
           <div className="circle">2</div>
         </div>
         <div className="base-node">

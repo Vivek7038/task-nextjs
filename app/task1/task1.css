@@ -24,10 +24,29 @@
   align-items: center;
   justify-content: center;
 }
+.circle1 {
+  animation: moveAtoB 3s linear infinite; /* Adjust the duration and timing function as needed */
+  z-index: 9999;
+}
 
 .base-node {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 150px;
+}
+@keyframes moveAtoB {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(100px, -50px) rotate(45deg);
+  }
+  50% {
+    transform: translate(200px, 0) rotate(90deg);
+  }
+  100% {
+    transform: translate(200px, 0px) rotate(135deg);
+    opacity: 0;
+  }
 }
