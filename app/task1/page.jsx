@@ -36,6 +36,7 @@ export default function App() {
           Home
         </Link>
       </div>
+      {icon}
       <div className="triangle-container ">
         <div className="top-nodes">
           <div className="circle circle1 justify-center ">
