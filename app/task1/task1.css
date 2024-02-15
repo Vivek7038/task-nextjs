@@ -37,7 +37,6 @@ body {
 }
 .icon-1 {
   animation: moveAtoB 5s linear;
-  /* animation: moveAtoB 5s linear; */
   z-index: 99;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -99,5 +98,22 @@ body {
     transform: translate(0, 0) rotate(0);
     opacity: 1;
     visibility: visible;
+  }
+}
+.icon-3 {
+  animation: moveCtoA 5s linear;
+  z-index: 99;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes moveCtoA {
+  0% {
+    visibility: visible;
+    transform: rotate(-90deg) translate(0, 0) rotate(-180deg);
+  }
+
+  100% {
+    visibility: hidden;
+    transform: rotate(180deg) translate(95px, 200px) rotate(-180deg);
   }
 }

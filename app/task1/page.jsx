@@ -10,7 +10,7 @@ import { FaBoxOpen } from "react-icons/fa";
 import { LuFileText } from "react-icons/lu";
 
 export default function App() {
-  const [icon, setIcon] = useState(2);
+  const [icon, setIcon] = useState(1);
 
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
@@ -56,7 +56,11 @@ export default function App() {
           </div>
         </div>
         <div className="base-node">
-          <div className="circle">3</div>
+          <div className="circle">3
+          <div className={icon === 3 ? "icon-3" : "hidden"}>
+              <FaPerson color="yellow" />
+            </div>
+          </div>
         </div>
       </div>
     </>
