@@ -61,3 +61,9 @@ body {
     visibility: hidden;
   }
 }
+.icon-2 {
+       animation: moveBtoC 5s linear;
+       z-index: 99;
+       animation-iteration-count: 1;
+       animation-fill-mode: forwards;
+     }

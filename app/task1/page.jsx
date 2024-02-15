@@ -10,7 +10,22 @@ import { FaBoxOpen } from "react-icons/fa";
 import { LuFileText } from "react-icons/lu";
 
 export default function App() {
-  const [Icon, setIcon] = useState(0);
+  const [icon, setIcon] = useState(2);
+
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     if (icon < 7) {
+  //       setIcon((prevIcon) => prevIcon + 1);
+  //     } else {
+  //       clearInterval(intervalId);
+  //     }
+  //   }, 5000); 
+
+    
+  //   return () => clearInterval(intervalId);
+  // }, [icon]);
+
+
   return (
     <>
       <div className="pl-8 mt-4">
@@ -25,12 +40,18 @@ export default function App() {
         <div className="top-nodes">
           <div className="circle circle1 justify-center ">
             1
-            <div className="icon-1">
+            <div className={icon === 1 ? "icon-1" : "hidden"}>
               <FaFile color="yellow" />
             </div>
           </div>
           <div className="circle">
-            2<div></div>
+            2
+            <div className={icon === 2 ? "icon-2" : "hidden"}>
+              <GrTask color="yellow" />
+            </div>
+            <div>
+            
+            </div>
           </div>
         </div>
         <div className="base-node">
